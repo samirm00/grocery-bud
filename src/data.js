@@ -2,15 +2,15 @@ export const data = {
     items: [
         {
             id: 1,
-            text: 'buy some vegtables',
+            text: 'buy some vegetables',
         },
         {
             id: 2,
-            text: 'buy a bread',
+            text: 'buy bread',
         },
         {
             id: 3,
-            text: 'buy a salad',
+            text: 'buy salad',
         },
     ],
     id: 4,

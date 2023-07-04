@@ -1,10 +1,12 @@
-import data from './data.js';
-import createSlide from './components/createSlide.js';
-import './listeners/showNextListener.js';
-import './listeners/showPreviousListener.js';
+import { data, dom } from './data.js';
+import createItem from './components/createItem.js';
 
-// by default show the first slide
-const sliders = document.querySelector('.slider-container');
-const firstSlideData = data.slides[data.counter];
-const slideDom = createSlide(firstSlideData);
-sliders.append(slideDom);
+// default show some items
+data.items.forEach((itemData) => {
+    const item = createItem(itemData);
+    dom.itemsList.append(item);
+});
+
+import './listeners/addItemListener.js';
+import './listeners/submitItemListener.js';
+import './listeners/deleteItemsListener.js';

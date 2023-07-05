@@ -12,8 +12,16 @@ export const data = {
             id: 3,
             text: 'buy salad',
         },
+        {
+            id: 4,
+            text: 'buy some chocolate',
+        },
+        {
+            id: 5,
+            text: 'buy something else',
+        },
     ],
-    id: 4,
+    id: 6,
 };
 
 export const dom = {

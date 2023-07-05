@@ -6,6 +6,8 @@ const deleteItemList = (id) => {
 
     // remove from the UI
     document.getElementById(id).remove();
+    dom.submitBtn.innerText = 'Submit';
+    dom.input.value = '';
 };
 
 export default deleteItemList;

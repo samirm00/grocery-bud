@@ -1,6 +1,6 @@
-# Image gallery
+# Grocery bud
 
-> A simple
+> A simple website to add, edit and delete items.
 
 ## Table of contents
 
@@ -20,7 +20,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/screenShot.png)
 
 ## Technologies
 
@@ -31,12 +31,22 @@
 
 ## Setup
 
-clone the repo and start using the stop watch.
+`npm install`
 
 ## Code Examples
 
 ```js
+import addTodoHandler from '../handlers/addTodoHandler.js';
+import dom from '../dom.js';
 
+const addTodoListener = () => {
+	dom.submitBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		addTodoHandler(dom.input.value);
+	});
+};
+
+export default addTodoListener;
 ```
 
 ## Features

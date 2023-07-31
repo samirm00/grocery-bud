@@ -1,12 +1,9 @@
-import { data, dom } from './data.js';
-import createItem from './components/createItem.js';
+import loadListener from './event/loadListener.js';
+import addTodoListener from './event/addTodoListener.js';
+import deleteTodoListener from './event/deleteTodosListener.js';
+import removeErrorListener from './event/removeErrorListener.js';
 
-// default show some items
-data.items.forEach((itemData) => {
-    const item = createItem(itemData);
-    dom.itemsList.append(item);
-});
-
-import './listeners/addItemListener.js';
-import './listeners/submitItemListener.js';
-import './listeners/deleteItemsListener.js';
+loadListener();
+addTodoListener();
+deleteTodoListener();
+removeErrorListener();

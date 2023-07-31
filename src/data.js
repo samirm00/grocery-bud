@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     items: [
         {
             id: 1,
@@ -24,10 +24,4 @@ export const data = {
     id: 6,
 };
 
-export const dom = {
-    submitBtn: document.querySelector('.submit-btn'),
-    input: document.getElementById('grocery'),
-    error: document.querySelector('.error'),
-    clearBtn: document.querySelector('.clear-btn'),
-    itemsList: document.querySelector('.grocery-list'),
-};
+export default data;

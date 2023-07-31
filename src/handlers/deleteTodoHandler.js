@@ -1,6 +1,7 @@
-import { data, dom } from '../data.js';
+import data from '../data.js';
+import dom from '../dom.js';
 
-const deleteItemList = (id) => {
+const deleteTodoHandler = (id) => {
     // delete item from the data
     data.items = data.items.filter((item) => item.id !== id);
 
@@ -10,4 +11,4 @@ const deleteItemList = (id) => {
     dom.input.value = '';
 };
 
-export default deleteItemList;
+export default deleteTodoHandler;

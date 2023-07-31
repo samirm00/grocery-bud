@@ -1,7 +1,8 @@
-import { data, dom } from '../data.js';
-import createItem from '../components/createItem.js';
+import data from '../data.js';
+import dom from '../dom.js';
+import createTodo from '../components/createTodo.js';
 
-const addItemList = (value) => {
+const addTodoHandler = (value) => {
     if (dom.submitBtn.innerText === 'Edit') {
         // update UI
         const editedItem = document.querySelector('.selected');
@@ -28,10 +29,10 @@ const addItemList = (value) => {
         };
         data.items.push(newItem);
 
-        const newItemDom = createItem(newItem);
+        const newItemDom = createTodo(newItem);
         dom.itemsList.insertBefore(newItemDom, dom.itemsList.firstChild);
         dom.input.value = '';
     }
 };
 
-export default addItemList;
+export default addTodoHandler;

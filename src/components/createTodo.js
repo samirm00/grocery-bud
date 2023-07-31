@@ -1,9 +1,7 @@
-// Imports
-import { data, dom } from '../data.js';
-import editItemList from '../handlers/editItemHandler.js';
-import deleteItemList from '../handlers/deleteItemHandler.js';
+import editTodoHandler from '../handlers/editTodoHandler.js';
+import deleteTodoHandler from '../handlers/deleteTodoHandler.js';
 
-function createItem(itemData) {
+function createTodo(itemData) {
     // create div
     const container = document.createElement('div');
     container.classList.add('grocery-item');
@@ -25,9 +23,8 @@ function createItem(itemData) {
 
     // add event
     btnEdit.addEventListener('click', () => {
-        dom.submitBtn.innerText = 'Edit';
         container.classList.add('selected');
-        editItemList(itemData.id);
+        editTodoHandler(itemData.id);
     });
     // create delete button
     const btnDelete = document.createElement('button');
@@ -35,7 +32,7 @@ function createItem(itemData) {
     btnDelete.innerHTML = '<i class="fas fa-trash"></i>';
     // add event
     btnDelete.addEventListener('click', () => {
-        deleteItemList(itemData.id);
+        deleteTodoHandler(itemData.id);
     });
 
     // append
@@ -45,4 +42,4 @@ function createItem(itemData) {
     return container;
 }
 
-export default createItem;
+export default createTodo;

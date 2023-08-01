@@ -2,23 +2,23 @@ const data = {
     items: [
         {
             id: 1,
-            text: 'buy some vegetables',
+            text: 'go to the doctor',
         },
         {
             id: 2,
-            text: 'buy bread',
+            text: 'call mom',
         },
         {
             id: 3,
-            text: 'buy salad',
+            text: 'feed the cat',
         },
         {
             id: 4,
-            text: 'buy some chocolate',
+            text: 'learn S-O-C',
         },
         {
             id: 5,
-            text: 'buy something else',
+            text: 'learn react',
         },
     ],
     id: 6,

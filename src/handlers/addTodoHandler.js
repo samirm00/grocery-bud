@@ -16,7 +16,7 @@ const addTodoHandler = (value) => {
         dom.submitBtn.innerText = 'Submit';
         dom.input.value = '';
     } else {
-        // add to data
+        // check if value exists
         if (value === '') {
             dom.error.innerText = 'the text can not be empty';
             dom.error.classList.add('error1');
@@ -30,7 +30,7 @@ const addTodoHandler = (value) => {
         data.items.push(newItem);
 
         const newItemDom = createTodo(newItem);
-        dom.itemsList.insertBefore(newItemDom, dom.itemsList.firstChild);
+        dom.itemsList.prepend(newItemDom);
         dom.input.value = '';
     }
 };

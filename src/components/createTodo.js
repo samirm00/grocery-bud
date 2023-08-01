@@ -1,10 +1,10 @@
 import editTodoHandler from '../handlers/editTodoHandler.js';
 import deleteTodoHandler from '../handlers/deleteTodoHandler.js';
 
-function createTodo(itemData) {
+const createTodo = (itemData) => {
     // create div
     const container = document.createElement('div');
-    container.classList.add('grocery-item');
+    container.classList.add('todo-item');
     container.id = itemData.id;
 
     // create title
@@ -26,6 +26,7 @@ function createTodo(itemData) {
         container.classList.add('selected');
         editTodoHandler(itemData.id);
     });
+
     // create delete button
     const btnDelete = document.createElement('button');
     btnDelete.classList.add('delete-btn');
@@ -40,6 +41,6 @@ function createTodo(itemData) {
     container.append(title, btnContainer);
 
     return container;
-}
+};
 
 export default createTodo;

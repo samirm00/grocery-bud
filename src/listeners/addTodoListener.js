@@ -1,5 +1,5 @@
-import addTodoHandler from '../handlers/addTodoHandler.js';
 import dom from '../dom.js';
+import addTodoHandler from '../handlers/addTodoHandler.js';
 
 const addTodoListener = () => {
     dom.submitBtn.addEventListener('click', (e) => {

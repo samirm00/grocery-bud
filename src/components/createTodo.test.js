@@ -8,7 +8,7 @@ describe('Test todos component', () => {
     describe('Test todo component', () => {
         const actual = createTodo({
             id: 1,
-            text: 'buy some vegetables',
+            text: 'call Jack',
         });
 
         const firstChild = actual.children[0];
@@ -22,20 +22,20 @@ describe('Test todos component', () => {
             expect(actual.childElementCount).toEqual(2);
         });
 
-        test('expect className -> grocery-item', () => {
-            expect(actual.className).toEqual('grocery-item');
+        test('expect className -> todo-item', () => {
+            expect(actual.className).toEqual('todo-item');
         });
 
         test('expect id -> 1', () => {
             expect(actual.id).toEqual('1');
         });
 
-        test('expect firstChild ->  p', () => {
+        test('expect firstChild nodeName ->  p', () => {
             expect(firstChild.nodeName).toEqual('P');
         });
 
-        test('expect firstChild innerTex ->  "buy some vegetables"', () => {
-            expect(firstChild.innerText).toEqual('buy some vegetables');
+        test('expect firstChild innerTex ->  "call Jack"', () => {
+            expect(firstChild.innerText).toEqual('call Jack');
         });
 
         test('expect firstChild className ->  title', () => {
